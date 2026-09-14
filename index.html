@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>권현석 | 포트폴리오</title>
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS 연결 (defer) -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- 좌측 고정 사이드바 (데스크톱) / 상단 헤더 (모바일) -->
+  <header class="sidebar" id="sidebar">
+    <!-- 모바일 상단 바 영역 (브랜드 로고 & 컨트롤 버튼) -->
+    <div class="sidebar__brand">
+      <a href="#hero" class="sidebar__logo">HYEONSEOK.DEV</a>
+      <div class="sidebar__actions">
+        <!-- 모바일 햄버거 버튼 -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 네비게이션 메뉴 (데스크톱: 좌측 메뉴 / 모바일: 드롭다운) -->
+    <nav class="sidebar__nav" id="sidebar-nav">
+      <div class="sidebar__header-desktop">
+        <a href="#hero" class="sidebar__logo-desktop">HYEONSEOK.DEV</a>
+        <p class="sidebar__tagline">Web Developer</p>
+      </div>
+
+      <ul class="sidebar__menu" id="sidebar-menu">
+        <li class="sidebar__item"><a href="#hero" class="sidebar__link active">HOME</a></li>
+        <li class="sidebar__item"><a href="#about" class="sidebar__link">ABOUT</a></li>
+        <li class="sidebar__item"><a href="#skills" class="sidebar__link">SKILLS</a></li>
+        <li class="sidebar__item"><a href="#projects" class="sidebar__link">PROJECTS</a></li>
+        <li class="sidebar__item"><a href="#contact" class="sidebar__link">CONTACT</a></li>
+      </ul>
+
+      <!-- 데스크톱용 하단 영역 -->
+      <div class="sidebar__footer">
+        <p class="sidebar__copyright">&copy; 2026 권현석</p>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 우측 본문 콘텐츠 영역 -->
+  <main class="main-content">
+
+    <!-- 1. Hero 섹션 (프로필 이미지, 이름, 직무 포지션 전진 배치) -->
+    <section id="hero" class="hero section">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <!-- 프로필 이미지 -->
+          <div class="hero__profile">
+            <div class="hero__pfp-wrapper">
+              <img src="img/pfp(old).jpg" alt="권현석 프로필 사진" class="hero__pfp">
+            </div>
+          </div>
+          <!-- 이름, 직무 포지션, 소개 문구 -->
+          <div class="hero__text">
+            <div class="hero__position-badge">
+              <span class="status-dot"></span> FRONTEND DEVELOPER
+            </div>
+            <h1 class="hero__title">안녕하세요, <br>개발자 <span>권현석</span>입니다.</h1>
+            <p class="hero__description">
+              웹 기초부터 탄탄하게 쌓아가는 프론트엔드 개발자 권현석입니다.<br>
+              사용자 경험을 최우선으로 생각하며 직관적이고 견고한 웹을 구축합니다.
+            </p>
+            <div class="hero__buttons">
+              <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+              <a href="#contact" class="btn btn--outline">문의하기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About 섹션 -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section__title">ABOUT ME</h2>
+        <div class="about__content">
+          <div class="about__data">
+            <p class="about__intro">
+              새로운 기술을 탐구하고, 동작 원리를 깊이 이해하는 것을 즐깁니다.<br>
+              바닐라 JavaScript와 웹 표준을 준수하며 탄탄한 기본기를 다지고 있습니다.
+            </p>
+            <ul class="about__info">
+              <li><strong>이름:</strong> 권현석 (Kwon Hyeon Seok)</li>
+              <li><strong>이메일:</strong> <a href="mailto:wp230@syuin.ac.kr">wp230@syuin.ac.kr</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/wp230" target="_blank" rel="noopener noreferrer">github.com/wp230</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills 섹션 -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <h2 class="section__title">SKILLS</h2>
+        <div class="skills__grid">
+          <article class="skill__card">
+            <div class="skill__icon">🌐</div>
+            <h3>HTML5 / CSS3</h3>
+            <p>시맨틱 마크업, Flexbox, Grid, 반응형 웹 디자인, CSS 변수 시스템</p>
+          </article>
+          <article class="skill__card">
+            <div class="skill__icon">⚡</div>
+            <h3>JavaScript (ES6+)</h3>
+            <p>DOM 조작, 비동기 통신(async/await), Fetch API, 이벤트 기반 상태 관리</p>
+          </article>
+          <article class="skill__card">
+            <div class="skill__icon">📦</div>
+            <h3>Git & GitHub</h3>
+            <p>버전 관리, 브랜치 전략, GitHub Pages 배포 및 자동화</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Projects 섹션 (GitHub API 연동 영역) -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2 class="section__title">PROJECTS</h2>
+        <p class="section__subtitle">GitHub REST API를 통해 실시간으로 불러온 공개 저장소 목록입니다.</p>
+        <!-- JS로 동적 카드/로딩/에러/빈상태가 렌더링될 영역 -->
+        <div id="projects-container" class="projects__grid">
+          <!-- 자바스크립트에서 동적 삽입 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact 섹션 (문의 폼) -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section__title">CONTACT</h2>
+        <form id="contact-form" class="contact__form" novalidate>
+          <div class="form__group">
+            <label for="user-name">이름</label>
+            <input type="text" id="user-name" name="name" placeholder="이름을 입력해 주세요">
+            <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="user-email">이메일</label>
+            <input type="email" id="user-email" name="email" placeholder="example@email.com">
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form__group">
+            <label for="user-message">메시지</label>
+            <textarea id="user-message" name="message" rows="5" placeholder="보내실 메시지를 입력해 주세요"></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">메시지 전송</button>
+          <div id="form-status" class="form__status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. Footer 영역 -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <p>&copy; 2026 권현석 (Kwon Hyeon Seok). All rights reserved.</p>
+        <div class="footer__socials">
+          <a href="https://github.com/wp230" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- 우측 하단 플로팅 컨트롤 버튼 (다크모드 & 스크롤 탑) -->
+  <div class="floating-controls">
+    <button id="scroll-top" class="floating-btn scroll-top-btn" aria-label="맨 위로 이동">↑</button>
+    <button id="theme-toggle" class="floating-btn theme-toggle-btn" aria-label="다크 모드 토글">🌙</button>
+  </div>
+
+</body>
+</html>
